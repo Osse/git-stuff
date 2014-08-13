@@ -1,0 +1,10 @@
+A - B - C - D - E - F - G - H  master
+             \
+              \
+               I - J - K - L  feature
+
+feature..master = E F G H
+
+master..feature = I J K l
+
+master...feature = feature...master = E F G H I J K L

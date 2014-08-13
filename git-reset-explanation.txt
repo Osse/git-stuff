@@ -1,0 +1,16 @@
+Assumption: Currently checked out branch is master and you have:
+
+A - B - C - D - E - F - G - H master
+
+Then `git branch newbranch` gives you:
+
+                              master
+A - B - C - D - E - F - G - H
+                              newbranch
+
+and `git reset --hard C` gives you:
+        
+A - B - C master
+         \
+          \
+           D - E - F - G - H newbranch

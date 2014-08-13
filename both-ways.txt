@@ -1,0 +1,42 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  master
+             \
+              \
+               I - J - K - L  feature
+
+
+REBASE: After git checkout feature; git rebase master:
+======================================================
+
+A - B - C - D - E - F - G - H  master
+                             \
+                              \
+                               I' - J' - K' - L' feature
+
+
+After git checkout master; git merge feature:
+---------------------------------------------
+
+A - B - C - D - E - F - G - H  
+                             \
+                              \                  master
+                               I' - J' - K' - L' 
+                                                 feature
+
+aka. 
+                                                  master
+A - B - C - D - E - F - G - H - I' - J' - K' - L' 
+                                                  feature
+
+
+
+
+MERGE: After git checkout feature; git merge master:
+====================================================
+
+A - B - C - D - E - F - G - H   master
+             \               \
+              \               \
+               I - J - K - L - M  feature

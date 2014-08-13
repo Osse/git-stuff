@@ -1,0 +1,39 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  master
+             \
+              \
+               I - J - K - L  branchA
+                    \
+                     \
+                      M - N - O branchB
+
+
+
+EITHER: After git checkout branchA; git rebase master
+(or git rebase master branchB):
+=====================================================
+
+A - B - C - D - E - F - G - H  master
+             \               \
+              \               \
+               I - J           I' - J' - K' - L' branchA
+                     \
+                      \
+                       M - N - O branchB
+
+
+
+OR: After git checkout branchB; git rebase branchA
+(or git rebase branchA branchB)
+==================================================
+
+A - B - C - D - E - F - G - H  master
+                             \
+                              \
+                               I' - J' - K' - L' branchA
+                                     \
+                                      \
+                                       M' - N' - O' branchB
+(maybe)

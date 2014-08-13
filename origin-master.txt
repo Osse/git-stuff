@@ -1,0 +1,30 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  origin/master
+             \
+              \
+               I - J - K - L  master
+
+
+MERGE: After 
+a) git pull
+b) git fetch && git merge origin/master:
+========================================
+
+A - B - C - D - E - F - G - H  origin/master
+             \               \
+              \               \
+               I - J - K - L - M  master
+
+
+REBASE: After 
+a) git pull --rebase
+b) git fetch && git rebase origin/master:
+=========================================
+
+A - B - C - D - E - F - G - H  origin/master
+                             \
+                              \
+                               I' - J' - K' - L' master
+

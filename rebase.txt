@@ -1,0 +1,18 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  master
+             \
+              \
+               I - J - K - L  feature
+
+
+REBASE: After git checkout feature; git rebase master
+(or git rebase master feature):
+=====================================================
+
+A - B - C - D - E - F - G - H  master
+                             \
+                              \
+                               I' - J' - K' - L' feature
+

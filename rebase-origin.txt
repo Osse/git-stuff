@@ -1,0 +1,18 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  origin/master
+             \
+              \
+               I - J - K - L  master
+
+
+REBASE: After git checkout master; git rebase origin/master
+(or git rebase origin/master master):
+=====================================================
+
+A - B - C - D - E - F - G - H  origin/master
+                             \
+                              \
+                               I' - J' - K' - L' master
+

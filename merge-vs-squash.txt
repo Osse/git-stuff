@@ -1,0 +1,42 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  master
+             \
+              \
+               I - J - K - L  feature
+
+
+SQUASH: After git checkout master; git merge --squash feature
+==============================================================
+
+A - B - C - D - E - F - G - H - N  master
+             \
+              \
+               I - J - K - L  feature
+
+N is a combination of I, J, K and L (they are squashed)
+
+After git branch -D feature: 
+============================
+
+A - B - C - D - E - F - G - H - N  master
+
+
+MERGE: After git checkout master; git merge feature:
+====================================================
+
+A - B - C - D - E - F - G - H - M  master
+             \                /
+              \              /
+               I - J - K - L  feature
+
+After git branch -D feature:
+============================
+
+A - B - C - D - E - F - G - H - M  master
+             \                /
+              \              /
+               I - J - K - L
+
+M is merge commit. From there you can look at I, J, K and L
