@@ -33,7 +33,9 @@ A - B - C - D - E - F - G - H  master
                              \
                               \
                                I' - J' - K' - L' branchA
-                                     \
-                                      \
-                                       M' - N' - O' branchB
-(maybe)
+                                               \
+                                                \
+                                                 M' - N' - O' branchB
+
+(assuming I' is similar enough to I and J' is similar enough
+to J that Git can recognize them as equivalent)
