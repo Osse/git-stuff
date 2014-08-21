@@ -1,10 +1,24 @@
+Example history:
+================
+
 A - B - C - D - E - F - G - H  master
              \
               \
                I - J - K - L  feature
+
+log, rev-list, cherry-pick, ...
+===============================
 
 feature..master = E F G H
 
 master..feature = I J K l
 
 master...feature = feature...master = E F G H I J K L
+
+
+git diff specifically:
+======================
+
+master..feature = feature master = L H
+
+master...feature = $(git merge-base feature master) master = D L
