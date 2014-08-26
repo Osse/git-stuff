@@ -22,3 +22,5 @@ git diff specifically:
 master..feature = feature master = L H
 
 master...feature = $(git merge-base feature master) master = D L
+
+feature...master = $(git merge-base master feature) feature = D H
