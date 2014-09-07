@@ -19,7 +19,7 @@ master...feature = feature...master = E F G H I J K L
 git diff specifically:
 ======================
 
-master..feature = feature master = L H
+master..feature = master feature = H L
 
 master...feature = $(git merge-base feature master) master = D L
 
