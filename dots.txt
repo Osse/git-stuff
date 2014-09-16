@@ -11,7 +11,7 @@ log, rev-list, cherry-pick, ...
 
 feature..master = E F G H
 
-master..feature = I J K l
+master..feature = I J K L
 
 master...feature = feature...master = E F G H I J K L
 
