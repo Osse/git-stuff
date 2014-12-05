@@ -1,0 +1,36 @@
+Initial state:
+==============
+
+A - B - C - D - E - F - G - H  master
+             \
+              \
+               I - J - K - L  feature
+
+
+Assume both branches are pushed.
+
+REBASE: After git checkout feature; git rebase master
+(or git rebase master feature):
+=====================================================
+
+A - B - C - D - E - F - G - H  master
+                             \
+                              \
+                               I' - J' - K' - L' feature
+
+
+Now if you try to push without -f you get an error.
+
+PULL: git pull
+==============
+
+A - B - C - D - E - F - G - H  master
+             \               \
+              \               \
+               \               I' - J' - K' - L' - M feature
+                \                                 /
+                 \                               /
+                  `- I - J - K - L - - - - - - -'
+                              origin/feature
+
+You end up with a merge commit that merges the "old" and the "new" branch.
