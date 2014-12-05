@@ -19,7 +19,8 @@ A - B - C - D - E - F - G - H  master
                                I' - J' - K' - L' feature
 
 
-Now if you try to push without -f you get an error.
+Now if you try to push without -f you get an error telling you to pull before
+pushing. So if you follow that advice...
 
 PULL: git pull
 ==============
