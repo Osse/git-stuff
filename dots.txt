@@ -28,8 +28,8 @@ resolve to *two* commits:
 
 master..feature = master feature = H L
 
-master...feature = $(git merge-base feature master) master = D L
+master...feature = $(git merge-base feature master) feature = D L
 
-feature...master = $(git merge-base master feature) feature = D H
+feature...master = $(git merge-base master feature) master = D H
 
 For example: 'git diff feature...master' is the same as 'git diff D H'.
